@@ -16,7 +16,7 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
 ## Configuração e Instalação
 
 ### Pré-requisitos
-- Python 3.10+
+- Python 3.12
 - AWS CLI configurado
 - Docker
 - Terraform
@@ -25,8 +25,7 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
 
 1. Clone o repositório:
     ```sh
-    git clone https://github.com/<seu-usuario>/api-documentation.git
-    cd api-documentation
+    https://github.com/Josebentivi/titanic-survivors-api.git
     ```
 
 2. Configure e ative seu ambiente virtual Python:
@@ -37,7 +36,7 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
 
 3. Instale as dependências:
     ```sh
-    pip install -r requirements.txt
+    pip install -r lambda_function/requirements.txt
     ```
 
 4. Configure suas credenciais AWS:
@@ -89,7 +88,7 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
 - **Response**:
     ```json
     {
-        "prediction": 0.85
+        "prediction": 1
     }
     ```
 
@@ -152,29 +151,15 @@ A documentação completa da API, escrita em OpenAPI 3.0, pode ser visualizada u
 Para ver a documentação localmente:
 
 1. Clone o repositório Swagger UI:
-    ```sh
-    git clone https://github.com/swagger-api/swagger-ui.git
-    cd swagger-ui
-    ```
 
 2. Copie seu arquivo `openapi.yaml` para o diretório `dist` do Swagger UI.
 
 3. Abra o arquivo `index.html` em seu navegador para visualizar a documentação.
 
-Ou, acesse a documentação hospedada:
-```
-https://<seu-usuario>.github.io/api-documentation/
-```
+## Agradecimentos
 
-## Contribuindo
-
-Contribuições são bem-vindas! Por favor, abra uma issue ou um pull request para melhorias.
+Obrigado ao Itaú pelo fornecimento dos dados de treino para a aplicação.
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
-```
-
-### Conclusão
-
-Esse arquivo README.md fornece uma visão geral completa da API, incluindo seus endpoints, como configurá-la e instalá-la, e como visualizar a documentação OpenAPI. Sinta-se à vontade para personalizar e ajustar conforme necessário para atender às necessidades específicas do seu projeto. Se precisar de mais alguma coisa, estou à disposição para ajudar!
+Aberta.
