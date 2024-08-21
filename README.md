@@ -6,7 +6,7 @@ Esta API utiliza machine learning para prever a sobrevivência de passageiros no
 - [Descrição](#descrição)
 - [Configuração e Instalação](#configuração-e-instalação)
 - [Endpoints da API](#endpoints-da-api)
-- [Contribuindo](#contribuindo)
+- [Agradecimentos](#agradecimentos)
 - [Licença](#licença)
 
 ## Descrição
@@ -51,6 +51,9 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
     ```
 
 6. Construir e empurrar a imagem Docker:
+
+    A imagem Docker foi necessária, pois as bibliotecas ultrapassaram o limite de memória do lambda da AWS.
+
     ```sh
     docker build -t my-lambda-repo .
     aws ecr get-login-password --region sa-east-1 | docker login --username AWS --password-stdin <seu-aws-account-id>.dkr.ecr.sa-east-1.amazonaws.com
