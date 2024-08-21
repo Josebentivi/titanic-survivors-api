@@ -2,6 +2,8 @@
 
 Esta API utiliza machine learning para prever a sobrevivência de passageiros no naufrágio do Titanic. A API é construída utilizando o AWS API Gateway, Lambda, DynamoDB, Docker, Terraform e a documentação é fornecida no formato OpenAPI 3.0.
 
+API url: https://fxcxuuvymc.execute-api.sa-east-1.amazonaws.com/prod/sobreviventes
+
 ## Sumário
 - [Descrição](#descrição)
 - [Configuração e Instalação](#configuração-e-instalação)
