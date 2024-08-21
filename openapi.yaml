@@ -1,0 +1,146 @@
+openapi: 3.0.0
+info:
+  title: Titanic Survival Prediction API
+  description: API para prever a probabilidade de sobrevivência de passageiros do Titanic usando um modelo de Machine Learning.
+  version: 1.0.0
+paths:
+  /sobreviventes:
+    post:
+      summary: Predizer a probabilidade de sobrevivência de um passageiro
+      description: Recebe um array de características do passageiro e retorna a probabilidade de sobrevivência.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Age:
+                  type: number
+                  format: float
+                  description: Idade do passageiro
+                Fare:
+                  type: number
+                  format: float
+                  description: Tarifa paga pelo passageiro
+                Pclass:
+                  type: integer
+                  enum: [1, 2, 3]
+                  description: Classe de viagem (1, 2, 3)
+                Parch:
+                  type: integer
+                  description: Número de pais/filhos a bordo
+                SibSp:
+                  type: integer
+                  description: Número de irmãos/cônjuges a bordo
+                Sex_male:
+                  type: integer
+                  enum: [0, 1]
+                  description: Indicador de sexo (0 para feminino, 1 para masculino)
+                Embarked_Q:
+                  type: integer
+                  enum: [0, 1]
+                  description: Indicador de embarque em Queenstown (0 ou 1)
+                Embarked_S:
+                  type: integer
+                  enum: [0, 1]
+                  description: Indicador de embarque em Southampton (0 ou 1)
+              required:
+                - Age
+                - Fare
+                - Pclass
+                - Parch
+                - SibSp
+                - Sex_male
+                - Embarked_Q
+                - Embarked_S
+      responses:
+        '200':
+          description: Resultado da predição
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PassengerId:
+                    type: string
+                    description: ID do passageiro
+                  SurvivalProbability:
+                    type: number
+                    format: float
+                    description: Probabilidade de sobrevivência do passageiro
+        '400':
+          description: Requisição inválida (parâmetros ausentes ou incorretos)
+        '500':
+          description: Erro interno do servidor
+          
+    get:
+      summary: Listar todos os passageiros avaliados
+      description: Retorna uma lista de todos os passageiros que já foram avaliados.
+      responses:
+        '200':
+          description: Lista de passageiros avaliados
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    PassengerId:
+                      type: string
+                      description: ID do passageiro
+                    SurvivalProbability:
+                      type: number
+                      format: float
+                      description: Probabilidade de sobrevivência do passageiro
+        '500':
+          description: Erro interno do servidor
+
+
+  /sobreviventes/{id}:
+    get:
+      summary: Obter a probabilidade de sobrevivência de um passageiro pelo ID
+      description: Retorna a probabilidade de sobrevivência para um passageiro específico com base no ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Probabilidade de sobrevivência do passageiro
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  PassengerId:
+                    type: string
+                    description: ID do passageiro
+                  SurvivalProbability:
+                    type: number
+                    format: float
+                    description: Probabilidade de sobrevivência do passageiro
+        '404':
+          description: Passageiro não encontrado
+        '500':
+          description: Erro interno do servidor
+
+    delete:
+      summary: Deletar um passageiro pelo ID
+      description: Deleta um passageiro específico com base no ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Passageiro deletado com sucesso
+        '404':
+          description: Passageiro não encontrado
+        '500':
+          description: Erro interno do servidor
