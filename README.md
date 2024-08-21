@@ -27,7 +27,7 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
 
 1. Clone o repositório:
     ```sh
-    https://github.com/Josebentivi/titanic-survivors-api.git
+    git clone https://github.com/Josebentivi/titanic-survivors-api.git
     ```
 
 2. Configure e ative seu ambiente virtual Python:
