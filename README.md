@@ -162,6 +162,8 @@ Para ver a documentação localmente:
 
 3. Abra o arquivo `index.html` em seu navegador para visualizar a documentação.
 
+Ou você pode acessar .swagger-ui-master/ com o repositório pronto.
+
 ## Agradecimentos
 
 Obrigado ao Itaú pelo fornecimento dos dados de treino para a aplicação.
