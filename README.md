@@ -39,7 +39,7 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
     pip install -r lambda_function/requirements.txt
     ```
 
-4. Configure suas credenciais AWS:
+4. Configure suas credenciais AWS (Servidor localizado em São Paulo por conta da latência):
     ```sh
     aws configure
     ```
