@@ -63,7 +63,7 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
 
 7. Atualize o Terraform com a URI da imagem Docker:
     ```hcl
-    resource "aws_lambda_function" "predict_survival" {
+    resource "aws_lambda_function" "predict_function" {
       function_name = "predict_survival"
       package_type  = "Image"
       image_uri     = "<seu-aws-account-id>.dkr.ecr.sa-east-1.amazonaws.com/my-lambda-repo:latest"
