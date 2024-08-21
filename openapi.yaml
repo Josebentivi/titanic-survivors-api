@@ -90,6 +90,36 @@ paths:
                     PassengerId:
                       type: string
                       description: ID do passageiro
+                    Age:
+                      type: number
+                      format: float
+                      description: Idade do passageiro
+                    Fare:
+                      type: number
+                      format: float
+                      description: Tarifa paga pelo passageiro
+                    Pclass:
+                      type: integer
+                      enum: [1, 2, 3]
+                      description: Classe de viagem (1, 2, 3)
+                    Parch:
+                      type: integer
+                      description: Número de pais/filhos a bordo
+                    SibSp:
+                      type: integer
+                      description: Número de irmãos/cônjuges a bordo
+                    Sex_male:
+                      type: integer
+                      enum: [0, 1]
+                      description: Indicador de sexo (0 para feminino, 1 para masculino)
+                    Embarked_Q:
+                      type: integer
+                      enum: [0, 1]
+                      description: Indicador de embarque em Queenstown (0 ou 1)
+                    Embarked_S:
+                      type: integer
+                      enum: [0, 1]
+                      description: Indicador de embarque em Southampton (0 ou 1)
                     SurvivalProbability:
                       type: number
                       format: float
@@ -119,6 +149,36 @@ paths:
                   PassengerId:
                     type: string
                     description: ID do passageiro
+                  Age:
+                    type: number
+                    format: float
+                    description: Idade do passageiro
+                  Fare:
+                    type: number
+                    format: float
+                    description: Tarifa paga pelo passageiro
+                  Pclass:
+                    type: integer
+                    enum: [1, 2, 3]
+                    description: Classe de viagem (1, 2, 3)
+                  Parch:
+                    type: integer
+                    description: Número de pais/filhos a bordo
+                  SibSp:
+                    type: integer
+                    description: Número de irmãos/cônjuges a bordo
+                  Sex_male:
+                    type: integer
+                    enum: [0, 1]
+                    description: Indicador de sexo (0 para feminino, 1 para masculino)
+                  Embarked_Q:
+                    type: integer
+                    enum: [0, 1]
+                    description: Indicador de embarque em Queenstown (0 ou 1)
+                  Embarked_S:
+                    type: integer
+                    enum: [0, 1]
+                    description: Indicador de embarque em Southampton (0 ou 1)
                   SurvivalProbability:
                     type: number
                     format: float
