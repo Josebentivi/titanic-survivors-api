@@ -107,10 +107,10 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
             "Pclass": 1,
             "Parch": 0,
             "SibSp": 1,
-            "Sex_male": true,
-            "Embarked_Q": false,
-            "Embarked_S": true,
-            "prediction": 0.85
+            "Sex_male": 0,
+            "Embarked_Q": 0,
+            "Embarked_S": 1,
+            "prediction": 1
         },
         ...
     ]
@@ -129,10 +129,10 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
         "Pclass":1,
         "Parch": 0,
         "SibSp": 1,
-        "Sex_male": true,
-        "Embarked_Q": false,
-        "Embarked_S": true,
-        "prediction": 0.85
+        "Sex_male": 0,
+        "Embarked_Q": 0,
+        "Embarked_S": 1,
+        "prediction": 1
     }
     ```
 
