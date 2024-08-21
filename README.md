@@ -83,9 +83,9 @@ Esta API oferece endpoints para criar, listar, obter e excluir previsões de sob
         "Pclass": 1,
         "Parch": 0,
         "SibSp": 1,
-        "Sex_male": true,
-        "Embarked_Q": false,
-        "Embarked_S": true
+        "Sex_male": 0,
+        "Embarked_Q": 1,
+        "Embarked_S": 0
     }
     ```
 - **Response**:
