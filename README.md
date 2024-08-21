@@ -1,6 +1,6 @@
 # Titanic Survivor Prediction API
 
-Esta API utiliza machine learning para prever a sobrevivência de passageiros no naufrágio do Titanic. A API é construída utilizando o AWS API Gateway, Lambda e DynamoDB, e a documentação é fornecida no formato OpenAPI 3.0.
+Esta API utiliza machine learning para prever a sobrevivência de passageiros no naufrágio do Titanic. A API é construída utilizando o AWS API Gateway, Lambda, DynamoDB, Docker, Terraform e a documentação é fornecida no formato OpenAPI 3.0.
 
 ## Sumário
 - [Descrição](#descrição)
